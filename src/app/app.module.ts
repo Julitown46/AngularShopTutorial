@@ -11,6 +11,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { CartComponent } from './cart/cart.component';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { ShippingComponent } from './shipping/shipping.component';
+import { ProvidersComponent } from './providers/providers.component';
+import { ProvidersDetailsComponent } from './providers-details/providers-details.component';
 
 
 
@@ -32,6 +34,8 @@ import { ShippingComponent } from './shipping/shipping.component';
             { path: 'products/:productId', component: ProductDetailsComponent },
             { path: 'cart', component: CartComponent },
             { path: 'shipping', component: ShippingComponent },
+            { path: 'providers', component: ProvidersComponent },
+            { path: 'providers/:providerId', component: ProvidersDetailsComponent }
         ])], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
 

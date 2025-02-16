@@ -4,6 +4,11 @@
   <h3>{{ product.name }}</h3>
   <h4>{{ product.price | currency }}</h4>
   <p>{{ product.description }}</p>
-  <button type="button" (click)="addToCart(product)">Añadir </button>
+  <a [title]="provider?.name +' detalles'" [routerLink]="['/providers', product.id]">
+    {{ provider?.name }}
+</a>
+<br>
+<br>
+  <button type="button" (click)="addToCart(product)">Add </button>
   <!-- Este addToCart es el de producto details, que a su vez llama al addToCart del servicio cart -->
 </div>
