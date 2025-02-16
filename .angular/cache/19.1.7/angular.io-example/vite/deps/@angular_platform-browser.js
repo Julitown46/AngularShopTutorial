@@ -22,25 +22,26 @@ import {
   REMOVE_STYLES_ON_COMPONENT_DESTROY,
   SharedStylesHost,
   Title,
-  TransferState,
   VERSION,
   bootstrapApplication,
   createApplication,
   disableDebugTools,
   enableDebugTools,
   initDomAdapter,
-  makeStateKey,
   platformBrowser,
   provideClientHydration,
   provideProtractorTestingSupport,
+  withEventReplay,
   withHttpTransferCacheOptions,
+  withI18nSupport,
+  withIncrementalHydration,
   withNoHttpTransferCache
-} from "./chunk-7C52HHIF.js";
-import "./chunk-GQGXAMSG.js";
+} from "./chunk-YRU2HRBE.js";
+import "./chunk-N7BYCKIZ.js";
 import {
   getDOM
-} from "./chunk-AE3ITOJK.js";
-import "./chunk-47TOL4VA.js";
+} from "./chunk-6OORFGZS.js";
+import "./chunk-KQVTM4CV.js";
 export {
   BrowserModule,
   By,
@@ -56,17 +57,18 @@ export {
   Meta,
   REMOVE_STYLES_ON_COMPONENT_DESTROY,
   Title,
-  TransferState,
   VERSION,
   bootstrapApplication,
   createApplication,
   disableDebugTools,
   enableDebugTools,
-  makeStateKey,
   platformBrowser,
   provideClientHydration,
   provideProtractorTestingSupport,
+  withEventReplay,
   withHttpTransferCacheOptions,
+  withI18nSupport,
+  withIncrementalHydration,
   withNoHttpTransferCache,
   BrowserDomAdapter as ɵBrowserDomAdapter,
   BrowserGetTestability as ɵBrowserGetTestability,
@@ -80,4 +82,3 @@ export {
   getDOM as ɵgetDOM,
   initDomAdapter as ɵinitDomAdapter
 };
-//# sourceMappingURL=@angular_platform-browser.js.map
