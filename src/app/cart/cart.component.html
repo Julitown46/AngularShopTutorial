@@ -5,8 +5,9 @@
   </p>
 
 <div class="cart-item" *ngFor="let item of items">
-  <span>{{ item.name }}</span>
-  <span>{{ item.price | currency }}</span>
+  <span>{{ item.product.name }}</span>
+  <span>{{ item.product.price| currency }}</span>
+  <span>{{item.cantidad}}</span>
 </div>
 
 <select [(ngModel)]="selectedShipping" (change)="actualizarTotal()" name="shipping" id="shipping">

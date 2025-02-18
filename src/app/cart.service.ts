@@ -7,14 +7,20 @@ import { ObservableService } from './observable.service';
   providedIn: 'root'
 })
 export class CartService {
-items : Product[] = [];
+items : {product: Product, cantidad: number}[] = [];
 
   constructor(
     private http: HttpClient
   ) { }
 
   addToCart( product: Product) {
-    this.items.push(product);
+    const existe = this.items.find(p => p.product.id === product.id);
+
+    if (existe) {
+      existe.cantidad++;
+    } else {
+      this.items.push({product, cantidad: 1});
+    }
   }
 
   getItems() {
@@ -31,7 +37,7 @@ items : Product[] = [];
   }
 
   getTotalPrice(){
-    return this.items.reduce((acc, item) => acc + item.price, 0);
+    return this.items.reduce((acc, item) => acc + item.product.price, 0);
   }
 
 }
