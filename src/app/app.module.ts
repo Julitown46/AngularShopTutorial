@@ -13,6 +13,7 @@ import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'
 import { ShippingComponent } from './shipping/shipping.component';
 import { ProvidersComponent } from './providers/providers.component';
 import { ProvidersDetailsComponent } from './providers-details/providers-details.component';
+import {FormsModule} from "@angular/forms";
 
 
 
@@ -29,6 +30,7 @@ import { ProvidersDetailsComponent } from './providers-details/providers-details
         AppComponent
     ], imports: [BrowserModule,
         ReactiveFormsModule,
+        FormsModule,
         RouterModule.forRoot([
             { path: '', component: ProductListComponent },
             { path: 'products/:productId', component: ProductDetailsComponent },

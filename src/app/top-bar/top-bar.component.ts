@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ObservableService } from '../observable.service';
 
 @Component({
     selector: 'app-top-bar',
@@ -7,7 +8,14 @@ import { Component } from '@angular/core';
     standalone: false
 })
 export class TopBarComponent {
+    
+    numCarrito: number = 0;
 
+    constructor(private observableService: ObservableService){}
+
+    ngOnInit(){
+        this.observableService.curCarrito$.subscribe(num => this.numCarrito = num);
+    }
 }
 
 

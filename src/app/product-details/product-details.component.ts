@@ -4,6 +4,7 @@ import { Product, products } from '../products';
 import { CartService } from '../cart.service';
 import { Providers } from '../providers';
 import { ProvidersService } from '../providers.service';
+import { ObservableService } from '../observable.service';
 
 
 @Component({
@@ -19,7 +20,8 @@ export class ProductDetailsComponent {
   constructor (
      private route: ActivatedRoute,
     private cartService: CartService,
-    private providerService: ProvidersService
+    private providerService: ProvidersService,
+    private observableService: ObservableService
     ) {}
 
   ngOnInit() {
@@ -39,5 +41,6 @@ export class ProductDetailsComponent {
   addToCart(product : Product) {
     this.cartService.addToCart(product);
     window.alert('Producto añadido al carro');
+    this.observableService.sumarItem();
   }
 }
