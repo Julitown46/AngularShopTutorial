@@ -1,0 +1,18 @@
+{
+    "products2": [
+        {
+            "product_id": "1",
+            "product_name": "Phone ofdjnodfns",
+            "cost": 799,
+            "details": "A large phone with one of the best screens",
+            "supplier": 2
+          },
+          {
+            "product_id": "2",
+            "product_name": "Phone Loco",
+            "cost": 699,
+            "details": "A great phone with one of the best cameras",
+            "supplier": 2
+          }
+    ]
+}

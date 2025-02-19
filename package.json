@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
+    "start2": "concurrently \"json-server --watch src/assets/products.json --port 3001\" \"json-server --watch src/assets/products2.json --port 3002\" \"ng serve\"",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
@@ -21,6 +22,7 @@
     "@angular/platform-browser": "19.1.6",
     "@angular/platform-browser-dynamic": "19.1.6",
     "@angular/router": "19.1.6",
+    "concurrently": "^9.1.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"

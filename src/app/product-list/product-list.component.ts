@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
+import { ProductosService } from '../productos.service';
+import { Product } from '../products';
+import { Product2 } from '../product2';
 
-import { products } from '../products';
 
 @Component({
     selector: 'app-product-list',
@@ -9,7 +11,14 @@ import { products } from '../products';
     standalone: false
 })
 export class ProductListComponent {
-  products = [...products];
+  products: Product[] = [];
+  products2: Product2[] = [];
+
+
+  constructor(private productService: ProductosService){
+    this.productService.getProducts1().subscribe(p => this.products = p);
+    this.productService.getProducts2().subscribe(p => this.products2 = p);
+  }
 
   share() {
     window.alert('Esto es un window.alert emergente que se activa con la funcion share()!');
